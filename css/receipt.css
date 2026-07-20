@@ -1,0 +1,777 @@
+/* ===========================================
+            RECEIPT CARD
+=========================================== */
+
+#receiptCard{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08); 
+
+}
+
+/* ===========================================
+            WATERMARK
+=========================================== */
+
+.receipt-watermark{
+
+    
+
+    transform:transtate(-5%,-5%) rotate(-5deg);
+
+    font-size:90px;
+
+    font-weight:800;
+
+    color:#00B14F;
+
+    opacity:.04;
+
+    pointer-events:none;
+
+    user-select:none;
+
+} 
+
+/* ===========================================
+            TOP
+=========================================== */
+
+.receipt-top{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.receipt-logo{
+
+    width:72px;
+
+    margin-bottom:12px;
+
+}
+
+.receipt-top h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/* ===========================================
+            AMOUNT
+=========================================== */
+
+#receiptAmount{
+
+    text-align:center;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin:20px 0 15px;
+
+}
+
+/* ===========================================
+            SUCCESS
+=========================================== */
+
+.receipt-success{
+
+    width:170px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#EAFBF2;
+
+    color:#00B14F;
+
+    padding:12px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.receipt-success i{
+
+    font-size:18px;
+
+}
+
+#receiptDate{
+
+    text-align:center;
+
+    color:#666;
+
+    margin:20px 0 28px;
+
+    font-size:14px;
+
+}
+
+/* ===========================================
+            DIVIDER
+=========================================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #ECECEC;
+
+    margin:22px 0;
+
+}
+
+/* ===========================================
+            RECEIPT ROW
+=========================================== */
+
+.receipt-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #F2F2F2;
+
+    gap:18px;
+
+}
+
+.receipt-row:last-of-type{
+
+    border-bottom:none;
+
+}
+
+.receipt-row span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.receipt-row strong{
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:right;
+
+    max-width:60%;
+
+    word-break:break-word;
+
+}
+
+/* ===========================================
+            FOOTER
+=========================================== */
+
+.powered{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+/* ===========================================
+            BUTTON AREA
+=========================================== */
+
+.receipt-buttons{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+/* ===========================================
+            DOWNLOAD BUTTON
+=========================================== */
+
+#downloadBtn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#00B14F;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#downloadBtn:hover{
+
+    background:#009846;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+            HOME BUTTON
+=========================================== */
+
+#backHome{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#EEF1F4;
+
+    color:#111827;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#backHome:hover{
+
+    background:#E5E7EB;
+
+}
+
+#downloadBtn i,
+
+#backHome i{
+
+    margin-right:8px;
+
+}
+
+/* ===========================================
+            ANIMATIONS
+=========================================== */
+
+.details-page,
+
+.receipt-page{
+
+    animation:slideUp .45s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.top-card,
+
+.transaction-card,
+
+#receiptCard{
+
+    /* animation:fade .5s ease; */
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================================
+            MOBILE
+=========================================== */
+
+@media(max-width:430px){
+
+    .details-page,
+
+    .receipt-page{
+
+        padding:15px;
+
+    }
+
+    .top-card h1{
+
+        font-size:38px;
+
+    }
+
+    #receiptAmount{
+
+        font-size:38px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+            RECEIPT PAGE
+========================================== */
+
+/* .receipt-page{
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    min-height:100vh;
+    background:#f5f5f5;
+    padding:18px;
+} */
+
+/* ==========================================
+            RECEIPT
+========================================== */
+
+.receipt{
+
+    position:relative;
+
+    background:#fff;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    padding:30px 18px 25px;
+
+     box-shadow:0 8px 25px rgba(0,0,0,.08); 
+
+}
+
+/* ==========================================
+            WATERMARK
+========================================== */
+
+.receipt-watermark{
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../assets/watermarks.jpeg");
+
+    background-size:110px;
+
+    background-repeat:repeat;
+
+    opacity:.05;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.receipt-header{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.receipt-logo{
+
+    width:115px;
+
+}
+
+.receipt-header h2{
+
+    font-size:20px;
+
+    font-weight:500;
+
+    color:#222;
+
+}
+
+/* ==========================================
+            AMOUNT
+========================================== */
+
+#receiptAmount{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:45px;
+
+    text-align:center;
+
+    color:#00B14F;
+
+    font-size:62px;
+
+    font-weight:800;
+
+}
+
+.status{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-top:12px;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    color:#111;
+
+}
+
+#receiptDate{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-top:18px;
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+            DASH
+========================================== */
+
+.dash{
+
+    position:relative;
+
+    z-index:2;
+
+    border-top:2px dashed #d8d8d8;
+
+    margin:38px 0;
+
+}
+
+/* ==========================================
+            ROWS
+========================================== */
+
+.info-row{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:38px;
+
+}
+
+.label{
+
+    width:40%;
+
+    font-size:18px;
+
+    color:#808080;
+
+    line-height:28px;
+
+}
+
+.value{
+
+    width:58%;
+
+    text-align:right;
+
+    color:#111;
+
+    font-size:18px;
+
+    line-height:34px;
+
+    font-weight:600;
+
+    word-break:break-word;
+
+}
+
+.value div:last-child{
+
+    font-size:16px;
+
+    color:#222;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+            TRANSACTION
+========================================== */
+
+#receiptTransaction{
+
+    font-size:19px;
+
+    font-weight:500;
+
+    color:#111;
+
+}
+
+/* ==========================================
+            FOOTER
+========================================== */
+
+.footer-text{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#6f6f6f;
+
+    font-size:17px;
+
+    line-height:30px;
+
+    text-align:left;
+
+    margin-top:20px;
+
+}
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.receipt-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:22px;
+
+}
+
+#downloadBtn{
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#00B14F;
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+#backHome{
+
+    height:56px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#ECECEC;
+
+    color:#111;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:430px){
+
+    .receipt-page{
+
+        padding:0;
+
+        background:#fff;
+
+    }
+
+    .receipt{
+
+        border-radius:0;
+
+        min-height:100vh;
+
+        box-shadow:none;
+
+        padding:25px 18px 30px;
+
+    }
+
+    #receiptAmount{
+
+        font-size:56px;
+
+    }
+
+    .status{
+
+        font-size:28px;
+
+    }
+
+    .label{
+
+        font-size:17px;
+
+    }
+
+    .value{
+
+        font-size:17px;
+
+    }
+
+}

@@ -1,0 +1,1260 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+:root{
+
+    --green:#00B14F;
+    --dark:#111827;
+    --grey:#667085;
+    --border:#E5E7EB;
+    --bg:#F4F6F9;
+    --white:#FFFFFF;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/* =====================================
+        MOBILE APP
+===================================== */
+
+.app{
+
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    background:#F7F8FA;
+
+    position:relative;
+
+}
+
+/* =====================================
+            HEADER
+===================================== */
+
+.header{
+
+    background:linear-gradient(
+    180deg,
+    #00B14F,
+    #00A046);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:35px 25px 50px;
+
+    border-radius:0 0 35px 35px;
+
+    box-shadow:0 15px 35px rgba(0,177,79,.25);
+
+}
+
+.logo{
+
+    width:72px;
+
+    margin-bottom:18px;
+
+}
+
+.header h2{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.header p{
+
+    margin-top:8px;
+
+    opacity:.9;
+
+    font-size:14px;
+
+    line-height:22px;
+
+}
+
+/* =====================================
+            FORM CARD
+===================================== */
+
+.form-card{
+
+    background:#fff;
+
+    width:92%;
+
+    margin:-28px auto 40px;
+
+    border-radius:24px;
+
+    padding:24px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.form-card h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:22px;
+
+    color:#111;
+
+}
+
+/* =====================================
+            INPUT GROUP
+===================================== */
+
+.input-group{
+
+    margin-bottom:18px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#555;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.input-group input,
+
+.input-group select{
+
+    width:100%;
+
+    height:56px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    outline:none;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    background:#fff;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    border-color:var(--green);
+
+    box-shadow:0 0 0 4px rgba(0,177,79,.12);
+
+}
+
+.input-group input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+/* =====================================
+            BUTTON
+===================================== */
+
+#generateBtn{
+
+    width:100%;
+
+    height:58px;
+
+    margin-top:12px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:var(--green);
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#generateBtn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 20px rgba(0,177,79,.25);
+
+}
+
+#generateBtn:active{
+
+    transform:scale(.98);
+
+}
+
+#generateBtn i{
+
+    margin-right:8px;
+
+}
+/* =====================================
+            LOADING SCREEN
+===================================== */
+
+.loading{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#ffffff;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+}
+
+.loading.active{
+
+    display:flex;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid #E8F7EF;
+
+    border-top:6px solid var(--green);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loading p{
+
+    margin-top:20px;
+
+    color:#555;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+/* =====================================
+            TOAST
+===================================== */
+
+.toast{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%) translateY(100px);
+
+    background:#111827;
+
+    color:#fff;
+
+    padding:14px 22px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    transition:.4s;
+
+    z-index:999;
+
+}
+
+.toast.show{
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+/* =====================================
+        INPUT ANIMATION
+===================================== */
+
+.input-group input,
+
+.input-group select{
+
+    transition:
+    border .3s,
+    box-shadow .3s,
+    transform .25s;
+
+}
+
+.input-group input:focus,
+
+.input-group select:focus{
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+            CARD HOVER
+===================================== */
+
+.form-card{
+
+    transition:.35s;
+
+}
+
+.form-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* =====================================
+            BUTTON EFFECT
+===================================== */
+
+#generateBtn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#generateBtn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.25);
+
+    transform:skewX(-20deg);
+
+}
+
+#generateBtn:hover::before{
+
+    animation:shine .8s;
+
+}
+
+/* =====================================
+            SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+    width:5px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--green);
+
+    border-radius:30px;
+
+}
+
+/* =====================================
+            ANIMATIONS
+===================================== */
+
+@keyframes spin{
+
+from{
+
+transform:rotate(0);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-100%;
+
+}
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.header{
+
+animation:fadeUp .6s ease;
+
+}
+
+.form-card{
+
+animation:fadeUp .7s ease;
+
+}
+
+/* =====================================
+            MOBILE
+===================================== */
+
+@media(max-width:430px){
+
+.app{
+
+width:100%;
+
+}
+
+.form-card{
+
+width:94%;
+
+padding:20px;
+
+}
+
+.header{
+
+padding:30px 20px 45px;
+
+}
+
+.header h2{
+
+font-size:26px;
+
+}
+
+.logo{
+
+width:65px;
+
+}
+
+}
+
+/* ===========================================
+        DETAILS PAGE
+=========================================== */
+
+.details-page{
+
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    background:#F5F7FA;
+
+    margin:auto;
+
+    padding:18px;
+
+}
+
+.details-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.details-header h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+#backBtn{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    font-size:18px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+}
+
+/* ===========================================
+            TOP CARD
+=========================================== */
+
+.top-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:18px;
+
+}
+
+.top-logo{
+
+    width:70px;
+
+    margin-bottom:18px;
+
+}
+
+.small{
+
+    color:#888;
+
+    font-size:15px;
+
+}
+
+.top-card h3{
+
+    margin-top:10px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111;
+
+}
+
+.top-card h1{
+
+    font-size:42px;
+
+    margin:22px 0;
+
+    color:#111;
+
+    font-weight:800;
+
+}
+
+.success{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    background:#EAFBF2;
+
+    color:#00B14F;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+}
+
+.success i{
+
+    font-size:18px;
+
+}
+
+/* ===========================================
+        TRANSACTION CARD
+=========================================== */
+
+.transaction-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.transaction-card h3{
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* ===========================================
+            ROW
+=========================================== */
+
+.row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #ECECEC;
+
+    gap:15px;
+
+}
+
+.row:last-child{
+
+    border-bottom:none;
+
+}
+
+.row span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.row strong{
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:right;
+
+    max-width:60%;
+
+    word-break:break-word;
+
+}
+
+/* ===========================================
+            BUTTONS
+=========================================== */
+
+.button-area{
+
+    margin-top:25px;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.report-btn{
+
+    flex:1;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#F1F3F5;
+
+    color:#333;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+#shareBtn{
+
+    flex:1;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#00B14F;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+#shareBtn:hover{
+
+    background:#009846;
+
+}/* ===========================================
+            RECEIPT PAGE
+=========================================== */
+
+.receipt-page{
+
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    margin:auto;
+
+    background:#F5F7FA;
+
+    padding:18px;
+
+}
+
+/* ===========================================
+            RECEIPT CARD
+=========================================== */
+
+#receiptCard{
+
+    background:#fff;
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/* ===========================================
+            WATERMARK
+=========================================== */
+
+.watermark{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) rotate(-30deg);
+
+    font-size:90px;
+
+    font-weight:800;
+
+    color:#00B14F;
+
+    opacity:.04;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+/* ===========================================
+            TOP
+=========================================== */
+
+.receipt-top{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.receipt-logo{
+
+    width:72px;
+
+    margin-bottom:12px;
+
+}
+
+.receipt-top h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+/* ===========================================
+            AMOUNT
+=========================================== */
+
+#receiptAmount{
+
+    text-align:center;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin:20px 0 15px;
+
+}
+
+/* ===========================================
+            SUCCESS
+=========================================== */
+
+.receipt-success{
+
+    width:170px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:#EAFBF2;
+
+    color:#00B14F;
+
+    padding:12px;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.receipt-success i{
+
+    font-size:18px;
+
+}
+
+#receiptDate{
+
+    text-align:center;
+
+    color:#666;
+
+    margin:20px 0 28px;
+
+    font-size:14px;
+
+}
+
+/* ===========================================
+            DIVIDER
+=========================================== */
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #ECECEC;
+
+    margin:22px 0;
+
+}
+
+/* ===========================================
+            RECEIPT ROW
+=========================================== */
+
+.receipt-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #F2F2F2;
+
+    gap:18px;
+
+}
+
+.receipt-row:last-of-type{
+
+    border-bottom:none;
+
+}
+
+.receipt-row span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.receipt-row strong{
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:right;
+
+    max-width:60%;
+
+    word-break:break-word;
+
+}
+
+/* ===========================================
+            FOOTER
+=========================================== */
+
+.powered{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+/* ===========================================
+            BUTTON AREA
+=========================================== */
+
+.receipt-buttons{
+
+    margin-top:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+/* ===========================================
+            DOWNLOAD BUTTON
+=========================================== */
+
+#downloadBtn{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#00B14F;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#downloadBtn:hover{
+
+    background:#009846;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================================
+            HOME BUTTON
+=========================================== */
+
+#backHome{
+
+    width:100%;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#EEF1F4;
+
+    color:#111827;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#backHome:hover{
+
+    background:#E5E7EB;
+
+}
+
+#downloadBtn i,
+
+#backHome i{
+
+    margin-right:8px;
+
+}
+
+/* ===========================================
+            ANIMATIONS
+=========================================== */
+
+.details-page,
+
+.receipt-page{
+
+    animation:slideUp .45s ease;
+
+}
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.top-card,
+
+.transaction-card,
+
+#receiptCard{
+
+    animation:fade .5s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.98);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===========================================
+            MOBILE
+=========================================== */
+
+@media(max-width:430px){
+
+    .details-page,
+
+    .receipt-page{
+
+        padding:15px;
+
+    }
+
+    .top-card h1{
+
+        font-size:38px;
+
+    }
+
+    #receiptAmount{
+
+        font-size:38px;
+
+    }
+
+}
