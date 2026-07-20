@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Transaction Receipt</title>
+
+<link rel="stylesheet" href="css/receipt.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="receipt-page">
+
+<div id="receiptCard" class="receipt">
+
+<div class="receipt-watermark"></div>
+
+<!-- TOP -->
+
+<div class="receipt-header">
+
+<img src="assets/logo.png" class="receipt-logo">
+
+<h2>Transaction Receipt</h2>
+
+</div>
+
+<!-- AMOUNT -->
+
+<h1 id="receiptAmount"></h1>
+
+<h3 class="status">
+
+Successful
+
+</h3>
+
+<p id="receiptDate"></p>
+
+<div class="dash"></div>
+
+<!-- Recipient -->
+
+<div class="info-row">
+
+<div class="label">
+
+Recipient Details
+
+</div>
+
+<div class="value">
+
+<div id="receiptRecipient"></div>
+
+<div>
+
+<span id="receiptBank"></span>
+
+|
+
+<span id="receiptAccount"></span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Sender -->
+
+<div class="info-row">
+
+<div class="label">
+
+Sender Details
+
+</div>
+
+<div class="value">
+
+<div id="receiptSender"></div>
+
+<div>
+
+OPay |
+
+813*****388
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Transaction -->
+
+<div class="info-row">
+
+<div class="label">
+
+Transaction No.
+
+</div>
+
+<div class="value"
+
+id="receiptTransaction">
+
+</div>
+
+</div>
+
+<div class="dash"></div>
+
+<p class="footer-text">
+
+Enjoy a better life with OPay. Get free transfers, withdrawals, bill payments, instant loans, and good annual interest on your savings. OPay is licensed by the Central Bank of Nigeria and insured by the NDIC.
+
+</p>
+
+</div>
+
+<div class="receipt-buttons">
+
+<button id="downloadBtn">
+
+Download Receipt
+
+</button>
+
+<button id="backHome">
+
+Create Another
+
+</button>
+
+</div>
+
+</div>
+
+<script src="js/receipt.js"></script>
+
+</body>
+
+</html>
